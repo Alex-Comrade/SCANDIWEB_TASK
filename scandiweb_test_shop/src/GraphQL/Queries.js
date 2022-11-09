@@ -20,6 +20,7 @@ export const LOAD_CATEGORY_INFO = gql`
     query {
         category {
             products {
+                id
                 name
                 inStock
                 gallery
@@ -31,6 +32,27 @@ export const LOAD_CATEGORY_INFO = gql`
                     amount
                 }
             }
+        }
+    }
+`;
+
+export const LOAD_PRODUCTS = gql`
+    query getProductByID($id: String!) {
+        product(id: $id) {
+            name
+            inStock
+            gallery
+            description
+            category
+            attributes {
+                name
+                type
+                items {
+                    displayValue
+                    value
+                }
+            }
+            brand
         }
     }
 `;

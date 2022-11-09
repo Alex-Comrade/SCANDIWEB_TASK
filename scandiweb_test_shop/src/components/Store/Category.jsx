@@ -21,7 +21,7 @@ const Category = () => {
                         const currentPrice = item.prices.filter((price) => price.currency.label === "USD")[0].amount;
                         const currentSymbol = item.prices.filter((price) => price.currency.label === "USD")[0].currency.symbol;
                         return (
-                            <div key={item.name} className={classes.categoryInnerWrapper}>
+                            <a href={"/product/" + item.id} key={item.name} className={classes.categoryInnerWrapper}>
                                 <div className={classes.imgWrapper}>
                                     <img className={classes.img} src={item.gallery[0]}></img>
                                 </div>
@@ -30,7 +30,7 @@ const Category = () => {
                                     {currentSymbol}
                                     {currentPrice}
                                 </span>
-                            </div>
+                            </a>
                         );
                     })}
             </div>
