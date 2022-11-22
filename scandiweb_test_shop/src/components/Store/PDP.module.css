@@ -1,17 +1,155 @@
 .wrapperMain {
     width: 1440px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     margin: 0 auto;
 }
 
-.wrapperSide {
-    background: blue;
+.wrapperContent {
+    /* background: antiquewhite; */
+    display: flex;
+    margin-top: 83px;
+}
+
+.thumbnails {
     display: flex;
     flex-direction: column;
 }
 
-.img {
-    width: 50px;
-    height: 50px;
+.thumbImg {
+    width: 80px;
+    height: 80px;
+}
+
+/* ------------- */
+
+.wrapperMainImg {
+    margin: 0 100px 0 40px;
+}
+
+.mainPanel img {
+    width: 610px;
+    height: 511px;
+}
+
+/* ------------- */
+.wrapperInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    color: #1d1f22;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 27px;
+    margin-bottom: 16px;
+}
+
+.itemName {
+    color: #1d1f22;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 27px;
+    margin-bottom: 43px;
+}
+
+.attributeName {
+    font-family: "Roboto Condensed";
+    text-transform: uppercase;
+    color: #1d1f22;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.colorBoxWrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.colorBox {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+.colorBox:active,
+.colorBox:hover {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    outline: 1px solid #5ece7b;
+}
+
+.attributeValueWrapper {
+    display: flex;
+    gap: 12px;
+}
+
+.attributeValue {
+    color: #1d1f22;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+
+    padding: 25px;
+    text-align: center;
+    width: 38px;
+    height: 20px;
+    border: 1px solid;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+.attributeValue:hover,
+.attributeValue:active {
+    background: #1d1f22;
+    color: #fff;
+}
+
+/* ------------- */
+
+.priceHeading {
+    font-family: "Roboto Condensed";
+    text-transform: uppercase;
+    color: #1d1f22;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.price {
+    color: #1d1f22;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* ------------- */
+
+.addToCartBTN {
+    width: 292px;
+    height: 52px;
+    padding: 16px, 32px, 16px, 32px;
+    margin-bottom: 40px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: #5ece7b;
+    border: none;
+}
+
+.addToCartBTN:hover,
+.addToCartBTN:active {
+    cursor: pointer;
+    background: #47a15f;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.5px;
 }

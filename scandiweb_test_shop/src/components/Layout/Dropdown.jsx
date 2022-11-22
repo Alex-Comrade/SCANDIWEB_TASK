@@ -13,7 +13,7 @@ const Dropdown = ({ selected, setSelected }) => {
     const { data } = useQuery(LOAD_CURRENCIES);
 
     const currencyClickHandler = (item) => {
-        setSelected(item.symbol);
+        setSelected(item.label);
         setIsActive(false);
     };
 
@@ -21,6 +21,7 @@ const Dropdown = ({ selected, setSelected }) => {
         <div className={classes.dropdown}>
             <div className={classes.dropdownBtn} onClick={(e) => setIsActive(!isActive)}>
                 {selected}
+                <img className={classes.dropdownArrowImg} src={isActive ? ArrowUp : ArrowDown} />
             </div>
             {isActive && (
                 <div className={classes.dropdownContent}>

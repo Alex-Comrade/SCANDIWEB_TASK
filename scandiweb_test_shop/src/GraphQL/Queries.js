@@ -7,6 +7,28 @@ export const LOAD_CATEGORIES = gql`
         }
     }
 `;
+
+export const GET_CATEGORY_PRODUCTS = gql`
+    query ($CategoryInput: CategoryInput) {
+        category(input: $CategoryInput) {
+            name
+            products {
+                id
+                name
+                inStock
+                gallery
+                prices {
+                    currency {
+                        label
+                        symbol
+                    }
+                    amount
+                }
+            }
+        }
+    }
+`;
+
 export const LOAD_CURRENCIES = gql`
     query {
         currencies {
@@ -51,6 +73,13 @@ export const LOAD_PRODUCTS = gql`
                     displayValue
                     value
                 }
+            }
+            prices {
+                currency {
+                    label
+                    symbol
+                }
+                amount
             }
             brand
         }
